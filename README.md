@@ -1,1 +1,1 @@
-An Python Rock Paper Scissors game
+A Python Rock Paper Scissors game
