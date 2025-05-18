@@ -1,4 +1,5 @@
-from tkinter import * 
+#Rock Paper scissors game
+from tkinter import *  # type: ignore
 import random  as rn
 
 window=Tk()
@@ -9,9 +10,10 @@ window.geometry("1280x720")
 usr=0
 comp=0
 
-def rand():
+def rand():#Computer Decision
     return rn.choice(["rock", "paper", "scissor"])
-def update():
+
+def update():#GUI Updater
     l2.config(text=f"You: {usr}")
     l3.config(text=f"Computer: {comp}")
 
@@ -69,6 +71,8 @@ def scissor():
 
     update()
     
+
+#Tkinter GUI
 f1=Frame(window)
 f1.pack()
 l2=Label(f1, text=f"You: {usr}",font="AnnaiMN 30")
@@ -80,11 +84,11 @@ l3.pack(side='left')
 
 f2=Frame(window)
 f2.pack(pady= 150)
-b1=Button(f2, text="Rock", command=rock,font="AnnaiMN 30")
+b1=Button(f2, text="Rock", command=rock,font="AnnaiMN 30")#Rock
 b1.pack(side='left')
-b2=Button(f2, text="Paper", command=paper,font="AnnaiMN 30")
+b2=Button(f2, text="Paper", command=paper,font="AnnaiMN 30")#Paper
 b2.pack(side='left',padx=300)
-b3=Button(f2, text="Scissor", command=scissor,font="AnnaiMN 30")
+b3=Button(f2, text="Scissor", command=scissor,font="AnnaiMN 30")#Scissor
 b3.pack(side='left')
 
 l4=Label(window,text="🎉YOU WIN🎉",font="AnnaiMN 30")
